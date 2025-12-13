@@ -7,11 +7,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   python3 \
   ca-certificates \
   git \
+  pkg-config \
+  libcairo2-dev \
+  libjpeg-dev \
+  libpng-dev \
+  libpango1.0-dev \
+  libgif-dev \
+  librsvg2-dev \
   && rm -rf /var/lib/apt/lists/*
 
-# Install dependencies
+# Install dependencies (allow native builds with --unsafe-perm)
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --unsafe-perm
 
 # Copy source and build (client + server bundle)
 COPY . .
