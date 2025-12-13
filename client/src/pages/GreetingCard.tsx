@@ -4,6 +4,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Card3D from "@/components/Card3D";
 import FallingPetals from "@/components/FallingPetals";
 import MusicPlayer from "@/components/MusicPlayer";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import bouquetImage from "@assets/generated_images/minimalist_single_line_art_rose_drawing.png";
 
 export default function GreetingCard() {
@@ -18,19 +19,24 @@ export default function GreetingCard() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-background flex flex-col items-center justify-center relative overflow-hidden p-4">
+    <div className="min-h-screen w-full bg-background flex flex-col items-center justify-center relative overflow-hidden p-4 transition-colors duration-700">
       {/* Background Ambience */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/50 to-transparent" />
-        <div className="absolute inset-0 paper-texture opacity-30" />
+      <div className="absolute inset-0 pointer-events-none transition-colors duration-700">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/50 to-transparent dark:from-black/20 dark:to-transparent" />
+        <div className="absolute inset-0 paper-texture opacity-30 dark:opacity-10 dark:invert" />
         
         {/* Soft background blobs */}
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-gold/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 dark:bg-purple-900/20 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-gold/10 dark:bg-blue-900/20 rounded-full blur-[100px]" />
       </div>
 
-      {/* Music Player Control */}
-      {!loading && <MusicPlayer />}
+      {/* Controls (Top Left) */}
+      {!loading && (
+        <div className="fixed top-4 left-4 z-50 flex items-center gap-3">
+          <ThemeToggle />
+          <MusicPlayer />
+        </div>
+      )}
 
       {/* Falling Petals Animation */}
       {!loading && <FallingPetals />}
@@ -41,7 +47,7 @@ export default function GreetingCard() {
           <motion.img
             src={bouquetImage}
             alt="Decorative Bouquet"
-            className="absolute -bottom-12 -left-12 w-48 md:w-80 opacity-90 pointer-events-none z-20"
+            className="absolute -bottom-12 -left-12 w-48 md:w-80 opacity-90 dark:opacity-70 dark:invert pointer-events-none z-20"
             initial={{ opacity: 0, x: -50, rotate: -20 }}
             animate={{ opacity: 0.9, x: 0, rotate: -10 }}
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
@@ -49,7 +55,7 @@ export default function GreetingCard() {
            <motion.img
             src={bouquetImage}
             alt="Decorative Bouquet"
-            className="absolute -top-12 -right-12 w-48 md:w-80 opacity-90 pointer-events-none z-20"
+            className="absolute -top-12 -right-12 w-48 md:w-80 opacity-90 dark:opacity-70 dark:invert pointer-events-none z-20"
             initial={{ opacity: 0, x: 50, rotate: 200 }}
             animate={{ opacity: 0.9, x: 0, rotate: 170 }}
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}

@@ -32,7 +32,7 @@ const Petal = ({ delay }: { delay: number }) => {
       }}
     >
       {/* Simple SVG Petal Shape */}
-      <svg viewBox="0 0 24 24" fill="currentColor" className="text-primary/60 drop-shadow-sm">
+      <svg viewBox="0 0 24 24" fill="currentColor" className="text-primary/60 dark:text-white/80 drop-shadow-sm dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
         <path d="M12 2C12 2 14 8 18 10C22 12 18 16 14 18C10 20 6 18 4 14C2 10 8 8 12 2Z" />
       </svg>
     </motion.div>
