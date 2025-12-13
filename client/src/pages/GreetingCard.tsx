@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Card3D from "@/components/Card3D";
+import FallingPetals from "@/components/FallingPetals";
 
 export default function GreetingCard() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,9 @@ export default function GreetingCard() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-gold/10 rounded-full blur-[100px]" />
       </div>
 
+      {/* Falling Petals Animation */}
+      {!loading && <FallingPetals />}
+
       <AnimatePresence>
         {loading ? (
           <LoadingScreen key="loader" />
@@ -41,13 +45,6 @@ export default function GreetingCard() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Floating petals effect (CSS based for performance) */}
-      {!loading && (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-           {/* We could add particles here if needed, but keeping it clean for now */}
-        </div>
-      )}
     </div>
   );
 }

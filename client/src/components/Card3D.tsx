@@ -108,8 +108,19 @@ export default function Card3D() {
 
           <motion.div 
             className="w-full relative z-10"
-            animate={{ y: [0, -5, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ 
+              scale: 1, 
+              opacity: 1,
+              y: [0, -5, 0],
+              rotate: [0, 1, 0, -1, 0] // Subtle sway
+            }}
+            transition={{ 
+              scale: { duration: 1.2, ease: "easeOut" },
+              opacity: { duration: 1 },
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+              rotate: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+            }}
           >
             <img 
               src={bouquetImage} 
