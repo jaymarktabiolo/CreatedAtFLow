@@ -2,11 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const messages = [
-  "Wishing you a day...",
-  "Filled with love...",
-  "And endless joy.",
-  "Thinking of You",
-  "Best Wishes Always"
+  "Haiiii pooo...",
+  "Sori natagalan kaka debug...",
+  "But worthit hayts.",
+  "Pero anyways,",
+  "Sana pasundogon pako nimo pu",
+  "Alam mo nman yung BOBO pu",
+  "Alam ko nman na galit ka eggg",
+  "Pero san magustohan moto pu",
+  "Pero if dili EDIWAWWWW",
+  "Pero what if noh?",
+  "Maka storya ang iring?",
+  "BTW HAHAHAHHAHA",
+  "Ng dahil sa lemon na yan",
+  "Na Stress ako :(((((",
 ];
 
 export default function MessageLoop() {
