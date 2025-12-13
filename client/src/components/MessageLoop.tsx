@@ -5,7 +5,7 @@ const messages = [
   "Wishing you a day...",
   "Filled with love...",
   "And endless joy.",
-  "Happy Birthday!",
+  "Thinking of You",
   "Best Wishes Always"
 ];
 
