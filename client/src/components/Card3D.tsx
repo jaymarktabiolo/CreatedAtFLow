@@ -150,8 +150,7 @@ export default function Card3D() {
 
           <div className="z-10 w-full text-center space-y-[10%] h-full flex flex-col justify-center">
             <div className="flex flex-col gap-1">
-              <div className="font-serif text-[clamp(1.2rem,3vw,2rem)] text-accent/80">From Tabs</div>
-              <div className="font-serif text-[clamp(1.5rem,4vw,2.5rem)] text-foreground">To Bendoy</div>
+              <div className="font-script text-[clamp(1.5rem,4vw,2.5rem)] text-accent/80">From Tabs</div>
             </div>
             
             <div className="flex-1 flex items-center justify-center">
@@ -164,8 +163,9 @@ export default function Card3D() {
               May your year be filled with as much beauty and kindness as you bring into the world.
             </p>
 
-            <div className="pt-4">
-              <p className="font-script text-[clamp(1.5rem,4vw,2.5rem)] text-foreground">With Love</p>
+            <div className="pt-4 flex flex-col items-center gap-1">
+              <p className="font-serif italic text-muted-foreground text-sm">With Love</p>
+              <p className="font-script text-[clamp(1.5rem,4vw,2.5rem)] text-foreground">To Bendoy</p>
             </div>
           </div>
         </div>
