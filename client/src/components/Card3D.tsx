@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import MessageLoop from "./MessageLoop";
-import bouquetImage from "@assets/generated_images/elegant_watercolor_floral_bouquet_with_peonies_and_gold_leaves.png";
+import bouquetImage from "@assets/generated_images/elegant_watercolor_red_and_pink_rose_bouquet.png";
 import borderImage from "@assets/generated_images/delicate_floral_corner_border_element.png";
 
 export default function Card3D() {
