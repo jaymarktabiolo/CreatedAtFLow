@@ -95,7 +95,7 @@ export default function Card3D() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Front Face */}
-        <div className="absolute inset-0 backface-hidden bg-white rounded-xl overflow-hidden border border-border/50 flex flex-col items-center justify-center p-[6%] shadow-2xl">
+        <div className="absolute inset-0 backface-hidden bg-card rounded-xl overflow-hidden border border-border/50 flex flex-col items-center justify-center p-[6%] shadow-2xl">
           <div className="absolute inset-0 paper-texture opacity-50" />
           
           {/* Shine effect on hover */}
@@ -141,7 +141,7 @@ export default function Card3D() {
         </div>
 
         {/* Back Face */}
-        <div className="absolute inset-0 backface-hidden bg-white rounded-xl overflow-hidden rotate-y-180 border border-border/50 flex flex-col items-center justify-center p-[8%] shadow-2xl">
+        <div className="absolute inset-0 backface-hidden bg-card rounded-xl overflow-hidden rotate-y-180 border border-border/50 flex flex-col items-center justify-center p-[8%] shadow-2xl">
           <div className="absolute inset-0 paper-texture opacity-50" />
           
           {/* Border Decoration */}
