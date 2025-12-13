@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Card3D from "@/components/Card3D";
 import FallingPetals from "@/components/FallingPetals";
-import bouquetImage from "@assets/generated_images/elegant_watercolor_red_and_pink_rose_bouquet.png";
+import bouquetImage from "@assets/generated_images/minimalist_single_line_art_rose_drawing.png";
 
 export default function GreetingCard() {
   const [loading, setLoading] = useState(true);
