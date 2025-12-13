@@ -148,8 +148,11 @@ export default function Card3D() {
           <img src={borderImage} className="absolute top-0 left-0 w-[20%] opacity-60 pointer-events-none" />
           <img src={borderImage} className="absolute bottom-0 right-0 w-[20%] opacity-60 rotate-180 pointer-events-none" />
 
-          <div className="z-10 w-full text-center space-y-[15%] h-full flex flex-col justify-center">
-            <div className="font-serif text-[clamp(1.5rem,4vw,2.5rem)] text-accent">Dearest Friend,</div>
+          <div className="z-10 w-full text-center space-y-[10%] h-full flex flex-col justify-center">
+            <div className="flex flex-col gap-1">
+              <div className="font-serif text-[clamp(1.2rem,3vw,2rem)] text-accent/80">From Tabs</div>
+              <div className="font-serif text-[clamp(1.5rem,4vw,2.5rem)] text-foreground">To Bendoy</div>
+            </div>
             
             <div className="flex-1 flex items-center justify-center">
               <MessageLoop />
