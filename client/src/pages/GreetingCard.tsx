@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Card3D from "@/components/Card3D";
 import FallingPetals from "@/components/FallingPetals";
+import MusicPlayer from "@/components/MusicPlayer";
 import bouquetImage from "@assets/generated_images/minimalist_single_line_art_rose_drawing.png";
 
 export default function GreetingCard() {
@@ -27,6 +28,9 @@ export default function GreetingCard() {
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-gold/10 rounded-full blur-[100px]" />
       </div>
+
+      {/* Music Player Control */}
+      {!loading && <MusicPlayer />}
 
       {/* Falling Petals Animation */}
       {!loading && <FallingPetals />}
