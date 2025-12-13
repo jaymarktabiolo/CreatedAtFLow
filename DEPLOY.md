@@ -19,4 +19,6 @@ Quick options to deploy the app.
 Notes
 - The Dockerfile is a multi-stage build that runs `npm run build` then copies `dist` into a runtime image.
 - The server listens on `PORT` (defaults to 5000).
+- You do not need a database to run the app — it uses an in-memory `MemStorage` by default.
+- `drizzle.config.ts` is present for optional database migrations; it will no longer throw when `DATABASE_URL` is missing.
 - If you prefer Fly or other providers, I can add `fly.toml` or provider-specific CI.
