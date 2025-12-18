@@ -3,6 +3,14 @@ import { useState, useEffect } from "react";
 
 const messages = [
   "Hello World!",
+  "Hello World!",
+  "Hello World!",
+  "Hello World!",
+  "Hello World!",
+  "Hello World!",
+  "Hello World!",
+
+  
 ];
 
 export default function MessageLoop() {
